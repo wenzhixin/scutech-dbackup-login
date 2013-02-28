@@ -1,0 +1,12 @@
+body {
+	font-size: 12px;
+	font-family: "微软雅黑", Arial;
+}
+
+.disabled {
+	color: #ccc;
+}
+
+.table {
+	width: 300px;
+}
