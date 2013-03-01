@@ -36,6 +36,6 @@
 	}
 	
 	function get(key) {
-		return localStorage[key] && JSON.parse(localStorage[key])
+		return localStorage[key] && JSON.parse(localStorage[key]);
 	}
 })(window);
