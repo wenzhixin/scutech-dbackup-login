@@ -6,7 +6,7 @@ $(function() {
 	var WAIT_TIME = 500;
 
 	function main() {
-		var $iframe = $('#lhgfrm_lhgdgId').length > 0 && $($('#lhgfrm_lhgdgId')[0].contentWindow.document.body);
+		var $iframe = $('#lhgfrm_lhgdgId').contents();
 		if ($iframe.length > 0) {
 			$('#trialRadio', $iframe).click();
 			$('#continue', $iframe).click();
