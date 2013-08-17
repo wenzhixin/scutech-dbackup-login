@@ -26,8 +26,9 @@ $(function() {
 	
 	// fix: trigger link click
 	function triggerClick($el) {
+		if (!$el.length) return;
 		var evt = document.createEvent("MouseEvents");
-        evt.initEvent("click", false, false);
+		evt.initEvent("click", false, false);
 		$el.get(0).dispatchEvent(evt);
 	}
 	

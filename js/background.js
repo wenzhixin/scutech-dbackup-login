@@ -4,13 +4,17 @@
  */
 (function() {
 	chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
-	    switch (request.method) {
-	    case "getAutoLogin":
-	    	sendResponse({result: Storage.getAutoLogin()});
-	    	break;
-	    case "getUser":
-	    	sendResponse({user: Storage.getUser()});
-	    	break;
-	    }
+		switch (request.method) {
+		case "getAutoLogin":
+			sendResponse({
+				result : Storage.getAutoLogin()
+			});
+			break;
+		case "getUser":
+			sendResponse({
+				user : Storage.getUser()
+			});
+			break;
+		}
 	});
 })();

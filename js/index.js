@@ -64,8 +64,8 @@ $(function() {
 		var list = Storage.getList(),
 			user = Storage.getUser();
 		for (var i = 0; i < list.length; i++) {
-			addItem(list[i], list[i].username === user.username 
-				&& list[i].password === user.password);
+			addItem(list[i], list[i].username === user.username && 
+				list[i].password === user.password);
 		}
 	}
 	
@@ -75,7 +75,7 @@ $(function() {
 			var user = {
 				username: $(this).find('input[name="username"]').val(),
 				password: $(this).find('input[name="password"]').val()
-			}
+			};
 			if (user.username && user.password) {
 				list.push(user);
 			}
@@ -87,14 +87,14 @@ $(function() {
 		var username = user && user.username || '',
 			password = user && user.password || '';
 			tr = '<tr>' +
-		           '<td>' + 
-		           '<input type="radio" name="selectedRadio" ' + 
-		           	 (checked ? 'checked="checked"' : '') + ' /></td>' +
-		           '<td><input type="text" name="username" class="input-small" ' + 
-		           	 'placeholder="用户名" value="' + username + '" /></td>' +
-		           '<td><input type="text" name="password" class="input-small" ' + 
-		           	 'placeholder="用户名" value="' + password + '" /></td>' +
-		        '</tr>';
+					'<td>' + 
+						'<input type="radio" name="selectedRadio" ' + 
+							(checked ? 'checked="checked"' : '') + ' /></td>' +
+					'<td><input type="text" name="username" class="input-small" ' + 
+						'placeholder="用户名" value="' + username + '" /></td>' +
+					'<td><input type="text" name="password" class="input-small" ' + 
+						'placeholder="用户名" value="' + password + '" /></td>' +
+				'</tr>';
 		$table.find('tbody').append(tr);
 	}
 	
