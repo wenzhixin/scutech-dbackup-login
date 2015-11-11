@@ -6,22 +6,35 @@ $(function() {
 	var WAIT_TIME = 800;
 
 	function main() {
-		var $iframe = $('#lhgfrm_lhgdgId').contents();
-		if ($iframe.length > 0) {
-			$('#trialRadio', $iframe).click();
-			triggerClick($('#continue', $iframe));
+        // 新版
+		var $form = $('.form-signin'),
+            $username = $form.find('#txt_username'),
+            $password = $form.find('#txt_password'),
+            $submit = $form.find(':submit');
+
+        // 旧版
+		if (!$form.length) {
+            var $iframe = $('#lhgfrm_lhgdgId').contents();
+            if ($iframe.length > 0) {
+                $('#trialRadio', $iframe).click();
+                triggerClick($('#continue', $iframe));
+            }
+
+            $form = $('#form1');
+            $username = $form.find('#UserNameID');
+            $password = $form.find('#PWID');
+            $submit = $form.find('#LoginButton');
+        }
+        if (!$form.length) {
+            return;
 		}
-		
-		var $form1 = $('#form1');
-		if ($form1.length > 0) {
-			chrome.extension.sendRequest({method: "getUser"}, function(response) {
-				if (response.user) {
-					$('#UserNameID', $form1).val(response.user.username);
-					$('#PWID', $form1).val(response.user.password);
-					triggerClick($('#LoginButton', $form1));
-				}
-			});
-		}
+        chrome.extension.sendRequest({method: "getUser"}, function(response) {
+            if (response.user) {
+                $username.val(response.user.username);
+                $password.val(response.user.password);
+                triggerClick($submit);
+            }
+        });
 	}
 	
 	// fix: trigger link click

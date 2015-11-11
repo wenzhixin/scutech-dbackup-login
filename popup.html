@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<head>
+    <meta charset="utf-8"/>
     <title>popup</title>
-    <meta name="author" content="zhixin wen" />
-    <link rel="stylesheet" type="text/css" href="css/base.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/common.css" />
-  </head>
-  <body>
-    <div id="alert" class="alert none">
-      <button type="button" class="close">&times;</button>请选择记录
-    </div>
-    <div class="form-inline m10">
-      <label>
-        <input id="autoLogin" type="checkbox" /> 启用自动登录
-      </label>
-      <div class="ml10 btn-group">
+    <meta name="author" content="zhixin wen"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+<body>
+<div id="alert" class="alert none">
+    <button type="button" class="close">&times;</button>
+    请选择记录
+</div>
+<div class="form-inline m10">
+    <label>
+        <input id="autoLogin" type="checkbox"/> 启用自动登录
+    </label>
+
+    <div class="ml10 btn-group">
         <button id="addButton" class="btn btn-success btn-small"><i class="icon-plus"></i>增加</button>
         <button id="removeButton" class="btn btn-danger btn-small"><i class="icon-minus"></i>删除</button>
-      </div>
     </div>
-    <table id="table" class="table table-bordered">
-      <thead>
-        <tr>
-          <th></th>
-          <th>用户名</th>
-          <th>密码</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-    
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/storage.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-  </body>
+</div>
+<table id="table" class="table table-bordered">
+    <thead>
+    <tr>
+        <th></th>
+        <th>用户名</th>
+        <th>密码</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/storage.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
 </html>
