@@ -5,12 +5,12 @@
 (function () {
     chrome.extension.onRequest.addListener(function (request, sender, sendResponse) {
         switch (request.method) {
-            case "getAutoLogin":
+            case 'getAutoLogin':
                 sendResponse({
                     result: Storage.getAutoLogin()
                 });
                 break;
-            case "getUser":
+            case 'getUser':
                 sendResponse({
                     user: Storage.getUser()
                 });
