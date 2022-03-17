@@ -10,7 +10,7 @@ $(function() {
         var $form = $('.form-signin'),
             $username = $form.find('#txt_username'),
             $password = $form.find('#txt_password'),
-            $submit = $form.find(':submit');
+            $submit = $form.find('.btn-primary');
 
         // 旧版
         if (!$form.length) {
