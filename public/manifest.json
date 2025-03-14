@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Scutech DBackup Login",
+  "description": "登录迪备，方便测试",
+  "version": "2.0.0",
+  "icons": {
+    "128": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["login.js"]
+    }
+  ],
+  "action": {
+    "default_icon": "logo.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}
