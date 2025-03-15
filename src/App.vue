@@ -6,6 +6,7 @@
       :columns="columns"
       :data="data"
       @on-check="onCheck"
+      @on-uncheck="onCheck"
     />
   </div>
 </template>
