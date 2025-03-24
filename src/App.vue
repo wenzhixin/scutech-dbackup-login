@@ -7,6 +7,7 @@
       :data="data"
       @on-check="onCheck"
       @on-uncheck="onCheck"
+      @on-reorder-row="onCheck"
     />
   </div>
 </template>
@@ -20,7 +21,9 @@ const options = {
   classes: 'table table-bordered',
   height: 600,
   singleSelect: true,
-  clickToSelect: true
+  clickToSelect: true,
+  reorderableRows: true,
+  useRowAttrFunc: true
 }
 const addRow = e => {
   const $tr = $(e.target).parents('tr')
