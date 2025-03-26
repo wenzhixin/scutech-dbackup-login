@@ -8,3 +8,7 @@
 ### 2.1.0
 
 * Added support for reorder-rows.
+
+### 2.1.1
+
+* Fixed input cannot work bug caused by drag and drop.

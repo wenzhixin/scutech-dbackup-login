@@ -39,6 +39,9 @@ const addRow = e => {
     Utils.setStorage(data.value)
   }
 }
+const cellStyle = (value, row) => row.action === 'add' && {
+  classes: 'bs-checkbox' // prevent drag and drop
+}
 const columns = [
   {
     field: 'checked',
@@ -55,6 +58,7 @@ const columns = [
   {
     field: 'username',
     title: '用户名',
+    cellStyle,
     formatter: (val, row) => Utils.createInput(val, {
       name: 'username',
       disabled: row.action !== 'add'
@@ -63,6 +67,7 @@ const columns = [
   {
     field: 'password',
     title: '密码',
+    cellStyle,
     formatter: (val, row) => Utils.createInput(val, {
       name: 'password',
       disabled: row.action !== 'add'
@@ -78,6 +83,7 @@ const columns = [
   {
     field: 'action',
     title: '操作',
+    cellStyle,
     align: 'center',
     formatter: val => Utils.createLink(val || 'delete', {
       icon: val === 'add' ? 'bi-plus' : 'bi-trash'
