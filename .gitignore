@@ -1,4 +1,6 @@
-dist
+output/
 node_modules
 yarn.lock
 *.zip
+.DS_Store
+.wxt/

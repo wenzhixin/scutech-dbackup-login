@@ -14,7 +14,7 @@
 
 <script setup>
 import { onMounted, ref, useTemplateRef } from 'vue'
-import Utils from './utils'
+import Utils from '@/utils'
 
 const table = useTemplateRef('table')
 const options = {

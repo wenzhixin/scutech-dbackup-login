@@ -1,10 +1,12 @@
+import autoImports from './.wxt/eslint-auto-imports.mjs'
 import js from '@eslint/js'
 import pluginVue from 'eslint-plugin-vue'
 
 export default [
+  autoImports,
   {
     ignores: [
-      'dist/**/*'
+      'output/**/*'
     ]
   },
   {
